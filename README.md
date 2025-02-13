@@ -1,103 +1,33 @@
-# Zosh Food
+The Food Plaza project is a web application that allows users to browse, order, and review food items from various restaurants. It includes functionalities for both customers and restaurant owners. Customers can explore menus, place orders, and leave reviews, while restaurant owners can manage their menus and track orders.
 
-1. **User:**
-    - ID (Auto-generated)
-    - Username
-    - Password
-    - Email
-    - Phone Number
-    - Address
-    - Role (Customer or Restaurant Owner)
-    - Registration Date
-    - Last Login Date
-2. **Restaurant:**
-    - ID (Auto-generated)
-    - Name
-    - Description
-    - Cuisine Type
-    - Address
-    - Contact Information
-    - Opening Hours
-    - Ratings
-    - Image URL
-    - Registration Date
-3. **Menu Item:**
-    - ID (Auto-generated)
-    - Name
-    - Description
-    - Price
-    - Category
-    - Image URL
-    - Availability Status
-    - Restaurant (reference to Restaurant entity)
-    - Creation Date
-4. **Order:**
-    - ID (Auto-generated)
-    - Customer (reference to User entity)
-    - Restaurant (reference to Restaurant entity)
-    - Total Amount
-    - Order Status
-    - Timestamp
-    - Delivery Address
-    - Items (list of Order Items)
-    - Payment (reference to Payment entity, if applicable)
-5. **Order Item:**
-    - ID (Auto-generated)
-    - Menu Item (reference to Menu Item entity)
-    - Quantity
-    - Subtotal
-    - Order (reference to Order entity)
-6. **Payment:**
-    - ID (Auto-generated)
-    - Order (reference to Order entity)
-    - Payment Method
-    - Payment Status
-    - Total Amount
-    - Payment Timestamp
-7. **~~Delivery Executive:~~**
-    - ~~ID (Auto-generated)~~
-    - ~~Name~~
-    - ~~Contact Information~~
-    - ~~Availability Status~~
-    - ~~Current Location (Latitude and Longitude)~~
-8. **Review/Rating:**
-    - ID (Auto-generated)
-    - Customer (reference to User entity)
-    - Restaurant (reference to Restaurant entity)
-    - Rating
-    - Review Text
-    - Timestamp
-9. **Promotion/Coupon:**
-    - ID (Auto-generated)
-    - Code
-    - Discount Amount
-    - Validity Period
-    - Terms and Conditions
-10. **Notification:**
-    - ID (Auto-generated)
-    - Recipient (reference to User, Restaurant, or Delivery Executive entity)
-    - Message
-    - Timestamp
-    - Read Status
-11. **Category:**
-    - ID (Auto-generated)
-    - Name
-12. **Address:**
-    - ID (Auto-generated)
-    - Street Address
-    - City
-    - State/Province
-    - Postal Code
-    - Country
-    
-13. contact information
-    - email
-    - mobile
-    - twitter
-    - instagram
+Key Features
+User Authentication and Authorization:
 
-**service**
+Users can sign up, log in, and log out.
 
-**service-implementation**
+Different roles for customers and restaurant owners.
 
-**controller**
+Secure password handling with Spring Security.
+
+Restaurant and Menu Management:
+
+Restaurant owners can add, update, and delete menu items.
+
+Each restaurant has a profile page with details and a menu.
+
+Order Management:
+
+Customers can place orders and view their order history.
+
+Restaurant owners can view and manage incoming orders.
+
+Search and Filtering:
+
+Search for restaurants and menu items.
+
+Filter by cuisine, price range, ratings, etc.
+
+Responsive Design:
+
+Mobile-friendly design to ensure a good user experience on various devices.
+
